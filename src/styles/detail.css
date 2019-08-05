@@ -1,0 +1,54 @@
+.detail-container{
+    background: #FFFFFF;
+}
+
+.detail-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 0;
+}
+.breadcrumb{
+    margin-left: 10px;
+}
+.breadcrumb a{
+    color:white;
+}
+.detail-content{
+    padding: 10px 20px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.tag{
+    color: orangered;
+}
+.desc{
+    color: green;
+}
+.content{
+    margin-top: 30px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.title-box{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.footer-detail{
+    text-align: center;
+    color: orange;
+
+}
+.footer-detail span{
+    color: green;
+}
+.breadcrumb span{
+    color: #ffffff;
+    cursor: pointer;
+}
