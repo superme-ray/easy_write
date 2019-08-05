@@ -39,11 +39,11 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "https://superme-ray.github.io/easy_write",
+    "homepage": "./",
     "devDependencies": {
         "babel-plugin-import": "^1.12.0",
         "electron": "^6.0.0",
-        "gh-pages": "*"
+        "gh-pages": "^1.1.0"
     },
     "babel": {
         "presets": [

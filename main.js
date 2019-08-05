@@ -6,18 +6,18 @@ const url = require('url')
 // 保持window对象的全局引用,避免JavaScript对象被垃圾回收时,窗口被自动关闭.
 let mainWindow;
 
-function createWindow () {
+function createWindow() {
 //创建浏览器窗口,宽高自定义具体大小你开心就好
     mainWindow = new BrowserWindow({width: 1000, height: 700})
-    let menu  = Menu.buildFromTemplate([])
+    let menu = Menu.buildFromTemplate([])
     mainWindow.setMenu(menu);
 
-     // * 加载应用-----  electron-quick-start中默认的加载入口
-      mainWindow.loadURL(url.format({
+    // * 加载应用-----  electron-quick-start中默认的加载入口
+    mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, '/build/index.html'),
         protocol: 'file:',
         slashes: true
-      }))
+    }))
     // 加载应用----适用于 react 项目
     // mainWindow.loadURL('http://localhost:3000/');
 

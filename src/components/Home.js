@@ -24,7 +24,7 @@ class Home extends React.Component {
             showLoading: true,
             showBox: false,
             tag: ''
-        }
+        };
         this.changePage = this.changePage.bind(this)
     }
 

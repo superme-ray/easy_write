@@ -8,9 +8,9 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 const App = () => (
     <Router>
         <Fragment>
-            <Route exact path="/"  component={Home}/>
-            <Route exact path="/post"  component={Post}/>
-            <Route exact path="/detail/:id"  component={Detail}/>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/post" component={Post}/>
+            <Route exact path="/detail/:id" component={Detail}/>
         </Fragment>
     </Router>
 );

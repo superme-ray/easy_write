@@ -8,7 +8,8 @@ import BraftEditor from 'braft-editor'
 import 'braft-editor/dist/index.css'
 import {formatDate} from './common';
 import {Link} from "react-router-dom"
-import { createBrowserHistory } from 'history';
+import {createBrowserHistory} from 'history';
+
 const history = createBrowserHistory();
 
 
@@ -18,7 +19,7 @@ class Detail extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            showLoading:true
+            showLoading: true
         };
         this.goBack = this.goBack.bind(this);
     }
@@ -29,10 +30,10 @@ class Detail extends Component {
         let res = await this.fetchData(url);
         let data = res.data;
         data.create_time = formatDate(data.create_time);
-        this.setState({data, showLoading:false})
+        this.setState({data, showLoading: false})
     }
 
-    async goBack(){
+    async goBack() {
         await history.goBack();
     }
 
@@ -43,8 +44,8 @@ class Detail extends Component {
 
     render() {
         const {data, showLoading} = this.state;
-        if(showLoading){
-            return  <div className="loading-box"><Spin delay={100} tip='网速慢,别慌...' size="large"/></div>
+        if (showLoading) {
+            return <div className="loading-box"><Spin delay={100} tip='网速慢,别慌...' size="large"/></div>
         }
 
         return (
@@ -52,11 +53,11 @@ class Detail extends Component {
                 <Layout>
                     <Header className='detail-header'>
                         <div className="back" onClick={this.goBack}>
-                                <Breadcrumb className='breadcrumb'>
-                                    <Breadcrumb.Item>
-                                        <Icon type="left"/>&nbsp;返回
-                                    </Breadcrumb.Item>
-                                </Breadcrumb>
+                            <Breadcrumb className='breadcrumb'>
+                                <Breadcrumb.Item>
+                                    <Icon type="left"/>&nbsp;返回
+                                </Breadcrumb.Item>
+                            </Breadcrumb>
                         </div>
                     </Header>
                     <Content className='detail-content'>
@@ -70,11 +71,11 @@ class Detail extends Component {
                                     </div>
                                 </div>
                                 <div className="content">
-                                    <div dangerouslySetInnerHTML = {{__html:data.content}} ></div>
+                                    <div dangerouslySetInnerHTML={{__html: data.content}}></div>
                                 </div>
                             </div>
                             :
-                                null
+                            null
                         }
 
                     </Content>
