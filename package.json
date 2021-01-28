@@ -42,7 +42,7 @@
     "homepage": "./",
     "devDependencies": {
         "babel-plugin-import": "^1.12.0",
-        "electron": "^6.0.0",
+        "electron": "^9.4.0",
         "gh-pages": "^1.1.0"
     },
     "babel": {
